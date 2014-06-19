@@ -47,21 +47,21 @@
 // 	.attr("transform" , "translate(0,400)")
 // 	.call(axis); 
 
-d3.json("data/D3graph.json" , function(data)
-{
-	var canvas = d3.select("body")
-				.append("svg")
-				.attr("width",500)
-				.attr("height",500)	
+// d3.json("data/D3graph.json" , function(data)
+// {
+// 	var canvas = d3.select("body")
+// 				.append("svg")
+// 				.attr("width",500)
+// 				.attr("height",500)	
 
-	canvas.selectAll("rect")
-			.data(data)
-			.enter()
-				.append("rect")
-				.attr("width" , function(d) { return d.overall * 10;})
-				.attr("height" , 45)
-				.attr ("y" , function(d , i) {return i * 50;})
-				.attr ("fill" , "blue");
+// 	canvas.selectAll("rect")
+// 			.data(data)
+// 			.enter()
+// 				.append("rect")
+// 				.attr("width" , function(d) { return d.overall * 10;})
+// 				.attr("height" , 45)
+// 				.attr ("y" , function(d , i) {return i * 50;})
+// 				.attr ("fill" , "blue");
 
 	// canvas.selectAll("text")
 	// 		.data(data)
@@ -70,7 +70,7 @@ d3.json("data/D3graph.json" , function(data)
 	// 			.attr ("fill" , "white")
 	// 			.attr ("y" , function(d, i) {return i* 50 + 24;})
 	// 			.text(function(d) {return d.name;})
-})
+// })
 
 </script>
 

@@ -1,11 +1,19 @@
 d3.json "data/D3graph.json", (data) ->
-	canvas = d3.select("body").append("svg").attr("width", 1000).attr("height", 1000)
+
+	axis = d3.svg.axis()
+ 			.scale(1000)
+
+	color = d3.scale.linear()
+ 			.domain([0,data.graphDetails])
+ 			.range(["red" , "blue"])
+	canvas = d3.select("body").append("svg").attr("width", 500).attr("height", 500)
 	canvas.selectAll("rect").data(data.graphDetails)
 	.enter()
 	.append("rect")
 	.attr("width", (d) ->
-		d.overall * 10)
+		d.overall * 5)
 	.attr("height", 45)
+	.attr("transform" , "translate(100,500) rotate(270)")
 	.attr("y", (d, i) ->
     	i * 50)
 	.attr "fill", "blue"
@@ -18,3 +26,7 @@ d3.json "data/D3graph.json", (data) ->
 		i * 50 + 24)
 	.text (d) ->
 		d.year
+	
+	canvas.append("g")
+	.attr("transform" , "translate(100,500)")
+	.call(axis); 
