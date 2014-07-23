@@ -32,7 +32,7 @@ d3.json "data/D3graph.json", (data) ->
 	.append("text")
 	.attr("fill", "black")
 	.attr("y", (d, i) ->
-		i*100)
+		i*70)
 	.text (d) ->
 		d.year
 

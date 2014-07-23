@@ -11,7 +11,7 @@ d3.json("data/D3graph.json", function(data) {
     return i * 70;
   }).attr("fill", "blue");
   canvas.selectAll("text").data(data.graphDetails).enter().append("text").attr("fill", "black").attr("y", function(d, i) {
-    return i * 100;
+    return i * 70;
   }).text(function(d) {
     return d.year;
   });
