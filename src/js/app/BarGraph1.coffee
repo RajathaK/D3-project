@@ -12,7 +12,7 @@ d3.json "data/D3graph.json", (data) ->
 
 	canvas = d3.select("body").append("svg").attr("width", 500).attr("height", 500)
 				.append("g")
-				.attr("transform" , "translate(100,500) rotate(170)")
+				.attr("transform" , "translate(100,500) rotate(270)")
 				
 
 	

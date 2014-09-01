@@ -5,7 +5,7 @@ d3.json("data/D3graph.json", function(data) {
   widthScale = d3.scale.linear().domain([0, 75]).range([0, 500]);
   axis = d3.svg.axis().scale(widthScale).orient(["top"]);
   color = d3.scale.linear().domain([0, 75]).range(["red", "blue"]);
-  canvas = d3.select("body").append("svg").attr("width", 500).attr("height", 500).append("g").attr("transform", "translate(100,500) rotate(170)");
+  canvas = d3.select("body").append("svg").attr("width", 500).attr("height", 500).append("g").attr("transform", "translate(100,500) rotate(270)");
   canvas.selectAll("rect").data(data.graphDetails).enter().append("rect").attr("width", function(d) {
     return d.overall * 5;
   }).attr("height", 45).attr("y", function(d, i) {
