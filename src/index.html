@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+	 <link rel="stylesheet" type="text/css" href="style.css"/>
 	<script src="js/lib/dev/jquery-1.11.0.js"></script>
 	<!--<script src="js/lib/dev/bootstrap.js"></script>-->
 	<script src="js/lib/prod/d3.v3.min.js"></script>
@@ -10,24 +11,25 @@
 <body>
 	<div class="bargraph">
 		<h3>This is Bar Graph Page</h3>
-		<button class="changePage">Click Me</button>
+		<button class="next">Click</button>
 	</div>
+	
 	<div class="sunBurst" style="display:none;">
 		<h3>This is SunBurst Graph Page</h3>
-		<button class="revertPage">Click Me</button>
+		<button class="revertPage">Go Back</button>
 	</div>
-
 
 <script>
 
 //d3.select("body").append("p").text("Hi!!What's up??");
-$('.changePage').on('click',function(){
-	$('.bargraph').hide();
-	$('.sunBurst').show();
-});
 $('.revertPage').on('click',function(){
 	$('.bargraph').show();
 	$('.sunBurst').hide();
+});
+
+$('.next').on('click',function(){
+	$('.bargraph').hide();
+	$('.sunBurst').show();
 });
 
 </script>

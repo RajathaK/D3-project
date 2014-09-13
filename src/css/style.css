@@ -1,0 +1,9 @@
+/*.vertbargraph:hover {
+ 	fill: #397D02;
+}*/
+.sunBurst {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
